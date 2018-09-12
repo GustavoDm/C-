@@ -13,15 +13,15 @@ namespace Clase_7
 
         public double Cantidad
         {
-            get { return this.cantidad; }
+           /* get { return this.cantidad; }
             set
             {
                 this.cantidad = value >= 0 ? value : 0;
                 //if(value >= this.cantidad)
                 //    this.cantidad = value;
                 //else 
-                //    this.cantidad = value;                
-            }
+                    this.cantidad = value;                
+            }*/
         }
 
 
@@ -44,6 +44,10 @@ namespace Clase_7
             return new Dolar(cantidad);
         }
 
+        public static explicit operator Pesos(Dolar dolar)
+        {
+            return new Pesos(dolar.cantidad * Pesos );
+        }
         public static double GetCantidad(Dolar dolars)
         {
             return dolars.cantidad;

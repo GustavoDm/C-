@@ -63,7 +63,7 @@ namespace Clase_7
 
         public static bool operator ==(Pesos pesos, Dolar dolars)
         {
-            return (pesos.cantidad == dolars.cantidad);
+            return pesos == (Pesos)dolars;
         }
     }
-}
+} 
